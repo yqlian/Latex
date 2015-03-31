@@ -1,0 +1,92 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[footnotesize]{caption2}
+\usepackage{threeparttable}
+\usepackage{booktabs,tabularx}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{enumerate}
+\usepackage[bookmarksnumbered=true,
+            bookmarksopen=true,
+            CJKbookmarks=true,
+            colorlinks=true,
+            citecolor=blue,
+            linkcolor=red,
+            anchorcolor=green,
+            urlcolor=blue
+           ]{hyperref}
+\setlength{\hoffset}{-0.54cm}
+\setlength{\voffset}{-0.54cm}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\textwidth}{16cm}
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0.55cm}
+\setlength{\headsep}{0.45cm}
+\setlength{\footskip}{0.90cm}
+\setlength{\textheight}{23.8cm}
+\newtheorem{theorem}{\heiti 定理}[section]
+\newtheorem{lemma}{\heiti 引理}[section]
+\newtheorem{proposition}{\heiti 命题}[section]
+\newtheorem{corollary}{\heiti 推论}[section]
+\newtheorem{definition}{\heiti 定义}[section]
+\newtheorem{remark}{\heiti 注}
+\newenvironment{proof}{\begin{trivlist} \item[]{\heiti 证明}}{\end{trivlist}}
+\renewcommand\tablename{\bf{表}}
+\renewcommand\figurename{\bf{图}}
+\renewcommand\abstractname{\Large{摘~~~要}}
+\renewcommand\refname{参考文献}
+
+\title{\bf{标题}}
+\author{作者A$^1$\thanks{\url{MailTo:yqlian.rol@gmail.com}}~~~~~~作者B$^1$ \\
+$^1$机构}
+\date{}
+
+\begin{document}
+\maketitle
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+\vskip .2in \noindent{\bf 关键词：}模型，分析，抽样
+\end{abstract}
+
+\section{引言}
+引言是写在书或文章前面类似序言或导言的部分来作为书的概述或感想，亦指座谈会、讨论会、研讨会的开场白。也称前言、序言或概述，经常作为科技论文的开端，提出文中要研究的问题，引导读者阅读和理解全文。
+
+\section{建模}
+模型
+
+\section{分析}
+分析
+
+\subsection{分析A}
+分析A
+
+\begin{theorem}\label{theorem1}
+定理描述。
+\end{theorem}
+
+\subsection{分析B}
+分析B
+
+\begin{proof}
+同定理\ref{theorem1}。
+\end{proof}
+
+\section{数值模拟}
+模拟结果
+
+\section{结论}
+结论
+
+\begin{thebibliography}{99}
+\bibitem{maoss1} 茆诗松, 王静龙, 濮晓龙. ~{\it 高等数理统计(第二版)}. ~北京: 高等教育出版社, 2006.
+\bibitem{maoss2} 茆诗松, 汤银才. ~{\it 贝叶斯统计}. ~北京: 中国统计出版社, 2012.
+\end{thebibliography}
+
+\end{document}
