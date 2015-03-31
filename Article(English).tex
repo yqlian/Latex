@@ -1,0 +1,85 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[footnotesize]{caption2}
+\usepackage{threeparttable}
+\usepackage{booktabs,tabularx}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{enumerate}
+\usepackage[bookmarksnumbered=true,
+            bookmarksopen=true,
+            colorlinks=true,
+            citecolor=blue,
+            linkcolor=red,
+            anchorcolor=green,
+            urlcolor=blue
+           ]{hyperref}
+\setlength{\hoffset}{-0.54cm}
+\setlength{\voffset}{-0.54cm}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\textwidth}{16cm}
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0.55cm}
+\setlength{\headsep}{0.45cm}
+\setlength{\footskip}{0.90cm}
+\setlength{\textheight}{23.8cm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}
+\newenvironment{proof}{\begin{trivlist} \item[]{\em Proof.}}{\end{trivlist}}
+\renewcommand\tablename{\bf{Table}}
+\renewcommand\figurename{\bf{Figure}}
+\title{\bf{Title}}
+\author[1]{Author1\thanks{\url{MailTo:yqlian.rol@gmail.com}}}
+\author[1]{Author2}
+\affil[1]{Institution}
+\date{}
+\begin{document}
+\maketitle
+\pagestyle{plain}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Abstract
+\vskip .2in \noindent {\bf Key Words:} Model, Analysis, Sampling.
+\end{abstract}
+
+\section{Introduction}
+Introduction
+
+\section{Preliminaries}
+Preliminaries
+
+\section{Analysis}
+Analysis
+
+\subsection{Analysis A}
+Analysis A
+
+\subsection{Analysis B}
+Analysis B
+
+\begin{proof}
+The same as Theorem 1.
+\end{proof}
+
+\section{Numerical Studies}
+Samples
+
+\section{Conclusion}
+Conclusion
+
+\begin{thebibliography}{99}
+\bibitem{Berger1} Berger, J.O. and Bernardo, J.M. (1992). ~Ordered group reference priors with applications to a multinomial problem. ~{\it Biometrika}, 79, 25-37.
+\bibitem{Berger2} Berger, J.O. and Bernardo, J.M. (1992). ~On the development of reference priors. ~{\it Bayesian Statistics}, 4, 35-60.
+\end{thebibliography}
+
+\end{document}
