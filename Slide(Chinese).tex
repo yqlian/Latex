@@ -1,0 +1,189 @@
+\documentclass{beamer}
+
+\mode<presentation>{
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+\usecolortheme{wolverine}
+}
+
+\usefonttheme{professionalfonts}
+
+\usepackage[space,noindent]{ctex}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amsmath}
+\usepackage{xcolor}
+\hypersetup{
+  unicode={true}, % 使用unicode来编码PDF字符串
+  bookmarksopen={true}, % 展开书签
+  pdfborder={0 0 0}, % 链接无框
+  citecolor=blue,
+  linkcolor=blue, % blue
+  anchorcolor=blue,
+  urlcolor=blue,
+  colorlinks=true, % 注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
+  pdfborder=000 % 注释掉此项则交叉引用为彩色边框
+}
+
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{caption}[numbered]
+\renewcommand\tablename{\color{blue}表}
+\renewcommand\figurename{\color{blue}图}
+\newtheorem{mythl}{\heiti 引理}
+\newtheorem{mytht}{\heiti 定理}
+\newtheorem{mythr}{\heiti 注}[section]
+\newtheorem{mythc}{\heiti 推论}[section]
+\newtheorem{mythd}{\heiti 定义}
+\newtheorem{mytha}{\heiti 公理}
+\newtheorem{mythp}{\heiti 命题}
+\newtheorem{mythe}{\heiti 练习}
+\newtheorem{myli}{\hei 例}[section]
+
+\everydisplay{\color{red}}
+\setbeamercovered{transparent}
+\beamerdefaultoverlayspecification{<+->}
+
+\AtBeginSection[]
+{
+\begin{frame}
+\frametitle{报告提纲}
+\tableofcontents[currentsection]
+\end{frame}
+}
+\AtBeginSubsection[]
+{
+\begin{frame}
+\frametitle{报告提纲}
+\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
+\end{frame}
+}
+
+
+\begin{document}
+\hypersetup{CJKbookmarks=true}
+
+\title[短标题]{标题} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{作者} % Your name
+\institute[机构缩写] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+机构 \\ % Your institution for the title page
+\medskip
+\textcolor{blue}{\textit{yqlian.rol@gmail.com}} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\thispagestyle{empty}
+\addtocounter{framenumber}{-1}
+\end{frame}
+
+\begin{frame}
+\frametitle{报告提纲} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+\section{基本概念}
+
+\begin{frame}
+\frametitle{基本概念}
+\begin{itemize}
+\item 1983年美国IEEE计算机学会对“软件可靠性”定义：
+\begin{enumerate}
+    \item 在规定条件下，在规定时间内，软件不引起系统失效的概率，该概率是系统输入和系统使用的函数，也是软件中存在的错误的函数；系统输入将确定是否会遇到已存在的错误；
+    \item 在规定的时间周期内，在所述条件下执行所要求的功能的能力。
+\end{enumerate}
+\end{itemize}
+\begin{itemize}
+\item 设$F(t)$为软件故障概率函数，密度函数为$f(t)$，{\bf 可靠度函数}
+\begin{equation}
+R(t)=1-F(t)=P(\xi > t), \label{RelFun}
+\end{equation}
+随机变量$\xi$表示软件从运行开始到失效所经历的时间。
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{基本概念}
+\begin{itemize}
+\item 软件{\bf 失效率}(Software Failure Rate)
+\begin{equation}
+\lambda(t)=\frac{f(t)}{R(t)}. \label{lambda}
+\end{equation}
+有时又称为{\bf 故障率}或{\bf 风险率}。
+\end{itemize}
+\begin{itemize}
+\item 参数$\theta$的后验分布
+\begin{equation}
+\pi(\theta |x)=\frac{h(x,\theta)}{m(x)}=\frac{p(x|\theta)\pi(\theta)}{\int_\Theta p(x|\theta)\pi(\theta){\rm d}\theta}. \label{BayesF}
+\end{equation}
+由于$m(x)$是与$\theta$无关的因子，由分布的核的概念得
+\begin{equation}
+\pi(\theta |x)\propto p(x|\theta)\pi(\theta). \label{PiCore}
+\end{equation}
+\end{itemize}
+\end{frame}
+
+\section{实例分析}
+
+\begin{frame}
+\frametitle{实例分析}
+\begin{itemize}
+\item 实例分析
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\Huge{\centerline{The End}\centerline{Q \& A}}
+\end{frame}
+
+\end{document}
